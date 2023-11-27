@@ -1,0 +1,2038 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(peta_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* BUTTON */
+
+.btnTapir__btn {
+    position: absolute;
+    top: 207px; left: 125px;
+    opacity: 00%;
+    font-size: 20px;
+
+}
+
+.btnGajahSumatra__btn {
+    position: absolute;
+    top: 295px; left: 208px;
+    opacity: 0%;
+    font-size: 20px;
+}
+
+.btnRafflesia__btn {
+    position: absolute;
+    top: 400px; left: 287px;
+    opacity: 0%;
+    font-size: 20px;
+}
+
+.btnBadakJawa__btn {
+    position: absolute;
+    top: 504px; left: 436px;
+    opacity: 0%;
+    font-size: 18px;
+}
+
+.btnBekantan__btn {
+    position: absolute;
+    top: 304px; left: 548px;
+    opacity: 0%;
+    font-size: 18px;
+}
+
+.btnKantungSemar__btn {
+    position: absolute;
+    top: 312px; left: 615px;
+    opacity: 0%;
+}
+
+.btnPesutMahakam__btn {
+    position: absolute;
+    top: 265px; left: 660px;
+    opacity: 0%;
+    font-size: 20px;
+}
+
+.btnCempaka__btn {
+    position: absolute;
+    top: 523px; left: 492px;
+    opacity: 0%;
+    font-size: 13px;
+}
+
+.btnKamboja__btn {
+    position: absolute;
+    top: 549px; left: 593px;
+    opacity: 0%;
+    font-size: 11px;
+}
+
+.btnJalakBali__btn {
+    position: absolute;
+    top: 533px; left: 613px;
+    opacity: 0%;
+    font-size: 10px;
+}
+
+.btnCendana__btn {
+    position: absolute;
+    top: 556px; left: 769px;
+    opacity: 0%;
+    font-size: 11px;
+}
+
+.btnKomodo__btn {
+    position: absolute;
+    top: 559px; left: 795px;
+    opacity: 0%;
+    font-size: 10px;
+}
+
+.btnBabiRusa__btn {
+    position: absolute;
+    top: 345px; left: 750px;
+    opacity: 0%;
+    font-size: 17px;
+}
+
+.btnCempakaKasar__btn {
+    position: absolute;
+    top: 379px; left: 787px;
+    opacity: 0%;
+    font-size: 12px;
+}
+
+.btnCendrawasih__btn {
+    position: absolute;
+    top: 345px; left: 1107px;
+    opacity: 0%;
+    font-size: 14px;
+}
+
+.btnAnggrek__btn {
+    position: absolute;
+    top: 385px; left: 1183px;
+    opacity: 0%;
+    font-size: 15px;
+}
+
+/* POPUP */
+
+/*TAPIR*/
+.popup__Tapir {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupTapir__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupTapir__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupTapir__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupTapir__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupTapir__header h1 {
+    font-size: 30px;
+}
+
+.popupTapir__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupTapir__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+}
+
+.popupTapir__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 21.5px;
+}
+
+.btn_popupTapir__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn_popupTapir__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupTapir__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupTapir__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Tapir:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Tapir .popupTapir__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*GAJAH SUMATRA*/
+.popup__GajahSumatra {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupGajahSumatra__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupGajahSumatra__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupGajahSumatra__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupGajahSumatra__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupGajahSumatra__header h1 {
+    font-size: 30px;
+}
+
+.popupGajahSumatra__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupGajahSumatra__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+}
+
+.popupGajahSumatra__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 17.45px;
+}
+
+.btn_popupGajahSumatra__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupGajahSumatra__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupGajahSumatra__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupGajahSumatra__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__GajahSumatra:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__GajahSumatra .popupGajahSumatra__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BUNGA RAFFLESIA*/
+.popup__Rafflesia {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupRafflesia__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupRafflesia__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupRafflesia__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupRafflesia__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupRafflesia__header h1 {
+    font-size: 30px;
+}
+
+.popupRafflesia__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupRafflesia__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+}
+
+.popupRafflesia__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 14.5px;
+}
+
+.btn_popupRafflesia__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupRafflesia__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupRafflesia__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupRafflesia__btn:hover::before {
+    filter: blur(20px);
+}
+#popup__Rafflesia:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Rafflesia .popupRafflesia__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BADAK JAWA*/
+.popup__BadakJawa {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupBadakJawa__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupBadakJawa__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupBadakJawa__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupBadakJawa__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupBadakJawa__header h1 {
+    font-size: 30px;
+}
+
+.popupBadakJawa__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupBadakJawa__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 16px;
+}
+
+.popupBadakJawa__text p {
+    position: absolute;
+    top: 185px; left: 290px;
+    font-size: 15.5px;
+}
+
+.btn_popupBadakJawa__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupBadakJawa__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupBadakJawa__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupBadakJawa__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__BadakJawa:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__BadakJawa .popupBadakJawa__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BEKANTAN*/
+.popup__Bekantan {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupBekantan__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupBekantan__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupBekantan__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupBekantan__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupBekantan__header h1 {
+    font-size: 30px;
+}
+
+.popupBekantan__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupBekantan__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupBekantan__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 14.75px;
+}
+
+.btn_popupBekantan__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupBekantan__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupBekantan__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupBekantan__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Bekantan:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Bekantan .popupBekantan__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*KANTUNG SEMAR*/
+.popup__KantungSemar {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupKantungSemar__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupKantungSemar__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupKantungSemar__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupKantungSemar__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupKantungSemar__header h1 {
+    font-size: 30px;
+}
+
+.popupKantungSemar__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupKantungSemar__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 17px;
+}
+
+.popupKantungSemar__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 18px;
+}
+
+.btn_popupKantungSemar__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupKantungSemar__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupKantungSemar__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupKantungSemar__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__KantungSemar:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__KantungSemar .popupKantungSemar__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*PESUT MAHAKAM*/
+.popup__PesutMahakam {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupPesutMahakam__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupPesutMahakam__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupPesutMahakam__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupPesutMahakam__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupPesutMahakam__header h1 {
+    font-size: 30px;
+}
+
+.popupPesutMahakam__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupPesutMahakam__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupPesutMahakam__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 16px;
+}
+
+.btn_popupPesutMahakam__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupPesutMahakam__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupPesutMahakam__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupPesutMahakam__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__PesutMahakam:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__PesutMahakam .popupPesutMahakam__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*CEMPAKA*/
+.popup__Cempaka {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupCempaka__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupCempaka__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupCempaka__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupCempaka__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupCempaka__header h1 {
+    font-size: 30px;
+}
+
+.popupCempaka__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupCempaka__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 17px;
+}
+
+.popupCempaka__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 16px;
+}
+
+.btn_popupCempaka__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupCempaka__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupCempaka__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupCempaka__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Cempaka:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Cempaka .popupCempaka__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*KAMBOJA*/
+.popup__Kamboja {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupKamboja__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupKamboja__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupKamboja__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupKamboja__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupKamboja__header h1 {
+    font-size: 30px;
+}
+
+.popupKamboja__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupKamboja__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 21px;
+}
+
+.popupKamboja__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 17.5px;
+}
+
+.btn_popupKamboja__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupKamboja__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupKamboja__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupKamboja__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Kamboja:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Kamboja .popupKamboja__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*JALAK BALI*/
+.popup__JalakBali {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupJalakBali__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupJalakBali__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupJalakBali__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupJalakBali__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupJalakBali__header h1 {
+    font-size: 30px;
+}
+
+.popupJalakBali__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupJalakBali__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupJalakBali__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 18px;
+}
+
+.btn_popupJalakBali__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupJalakBali__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupJalakBali__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupJalakBali__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__JalakBali:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__JalakBali .popupJalakBali__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*POHON CENDANA*/
+.popup__Cendana {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupCendana__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupCendana__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupCendana__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupCendana__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupCendana__header h1 {
+    font-size: 30px;
+}
+
+.popupCendana__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupCendana__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 18px;
+}
+
+.popupCendana__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 17.05px;
+}
+
+.btn_popupCendana__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupCendana__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupCendana__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupCendana__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Cendana:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Cendana .popupCendana__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*KOMODO*/
+.popup__Komodo {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupKomodo__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupKomodo__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupKomodo__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupKomodo__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupKomodo__header h1 {
+    font-size: 30px;
+}
+
+.popupKomodo__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupKomodo__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupKomodo__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 16.5px;
+}
+
+.btn_popupKomodo__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupKomodo__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupKomodo__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupKomodo__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Komodo:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Komodo .popupKomodo__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BABI RUSA*/
+.popup__BabiRusa {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupBabiRusa__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupbabiRusa__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupBabiRusa__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupBabiRusa__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupBabiRusa__header h1 {
+    font-size: 30px;
+}
+
+.popupBabiRusa__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupBabiRusa__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupBabiRusa__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 14px;
+}
+
+.btn_popupBabiRusa__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupBabiRusa__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupBabiRusa__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupBabiRusa__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__BabiRusa:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__BabiRusa .popupBabiRusa__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*CEMPAKA HUTAN KASAR*/
+.popup__CempakaKasar {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupCempakaKasar__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupCempakaKasar__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupCempakaKasar__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupCempakaKasar__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupCempakaKasar__header h1 {
+    font-size: 30px;
+}
+
+.popupCempakaKasar__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupCempakaKasar__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 20px;
+}
+
+.popupCempakaKasar__text p {
+    position: absolute;
+    top: 160px; left: 290px;
+    font-size: 17px;
+}
+
+.btn_popupCempakaKasar__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupCempakaKasar__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupCempakaKasar__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupCempakaKasar__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__CempakaKasar:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__CempakaKasar .popupCempakaKasar__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*BURUNG CENDRAWASIH*/
+.popup__Cendrawasih {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupCendrawasih__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupCendrawasih__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupCendrawasih__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupCendrawasih__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupCendrawasih__header h1 {
+    font-size: 30px;
+}
+
+.popupCendrawasih__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupCendrawasih__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 15px;
+}
+
+.popupCendrawasih__text p {
+    position: absolute;
+    top: 175px; left: 290px;
+    font-size: 19.5px;
+}
+
+.btn_popupCendrawasih__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupCendrawasih__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupCendrawasih__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupCendrawasih__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Cendrawasih:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Cendrawasih .popupCendrawasih__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*ANGGREK HITAM*/
+.popup__Anggrek {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0, .7);
+    position: fixed;
+    top: 0; left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s;
+}
+
+.popupAnggrek__content {
+    width : 50%;
+    background-color: #F2E2D3;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .2);
+    border: 10px solid #F2E2D3;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popupAnggrek__img {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.popupAnggrek__img img {
+    width: 40%;
+    display: block;
+    box-shadow: 0px 20px 40px rgba(0,0,0, .5);
+}
+
+.popupAnggrek__header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #663100;
+}
+
+.popupAnggrek__header h1 {
+    font-size: 30px;
+}
+
+.popupAnggrek__text {
+    padding: 0px 36px;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #663100;
+}
+
+.popupAnggrek__text ul {
+    position: absolute;
+    top: 60px; left: 270px;
+    font-size: 20px;
+}
+
+.popupAnggrek__text p {
+    position: absolute;
+    top: 180px; left: 290px;
+    font-size: 22.75px;
+}
+
+.btn_popupAnggrek__btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #663100;
+    background-image: linear-gradient(180deg, #fb923c 0%, #451a03 74%);
+    font-weight: 500;
+
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 100px;
+    margin-left: 50%;
+    box-shadow: 0px 10px 40px rgba(0,0,0, .8);
+    transform: translateX(-50%);
+}
+
+.btn_popupAnggrek__btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+.btn_popupAnggrek__btn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(180deg,#fb923c 0%, #451a03 74%);
+    background-size: 300%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn_popupAnggrek__btn:hover::before {
+    filter: blur(20px);
+}
+
+#popup__Anggrek:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup__Anggrek .popupAnggrek__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
